@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BinarySupport</title>
+    <!--Bootstrap Styling-->
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <!--Custom Styling-->
+    <link rel="stylesheet" href="CSS/app.css">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/dc70abf1d9.js" crossorigin="anonymous"></script>
+    <!--app script-->
+    <script src="JS/contact.js" async></script>
+    <!--animations-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid" id="home-container">
+        
+        <!--Contact Modal-->
+        <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog .modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe name="hiddenFrame" style="display: none;"></iframe>
+                    <form action="http://127.0.0.1:3000" method="POST" enctype="application/x-www-form-urlencoded" target="hiddenFrame" id="contact-form">
+                        <div class="form-group">
+                            <label for="messenger-name" class="col-form-label">Name:</label>
+                            <input name="sender" type="text" class="form-control" id="messenger-name" >
+                        </div>
+                        <div class="form-group">
+                            <label for="messenger-email" class="col-form-label">Email:</label>
+                            <input name="address" type="text" class="form-control" id='messenger-email'>
+                            <p class="fine-print">Optional. Give us your email if you want a response to your message.</p>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message: </label>
+                            <textarea name="text" class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary send-btn" data-dismiss="modal" id="submit-message-btn">Send message</button>
+                </div>
+                </div>
+            </div>
+        </div>
+            
+        <header>
+            <!--navbar-->
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+                <a class="navbar-brand" href="#"><img src="assets/logo.png" class="img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            
+              <div class="navbar-block"></div>
+        </header>
+
+        <div id="HomeCarousel" class="carousel slide" data-ride="carousel" data-interval='3000'>
+            <div class="carousel-inner">
+              
+
+              <div class="carousel-item active">
+                <img class="bg" src="assets/backgrounds/binary-bg.jpg">
+                <div class="slide-one-text">
+                    <h1>Great IT</h1>
+                    <h1>Service is</h1>
+                    <h1 class="punchline">Binary</h1>
+                    <!-- We bring the power and simplification of IT to Businesses.  -->
+                </div>
+                <img class="slide-one-img img-fluid" src="assets/working man.png" alt="First slide">
+              </div>
+
+              <div class="carousel-item">
+                <img class="bg" src="assets/backgrounds/binary-bg.jpg">
+                <div class="slide-two-text">
+                   <img class="quotation-marks" src="assets/quotation marks small.png">
+                   <h4>IT Problems?</h4>
+                   <h2>We're here to help</h2>
+                   <a href="services.html"><h5>Our Services</h5><i class="fa fa-caret-right" aria-hidden="true"></i></a>  
+                </div>
+                <img class="slide-two-img img-fluid" src="assets/customer-service-lady.png" alt="Second slide">
+              </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#HomeCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#HomeCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <section id="home-intro">
+            <div class="left">
+                <div class="content-wrapper">
+                    <h2>We bring the power and simplification of IT to Businesses</h2>
+                    <br>
+                    <p> Our goal at Binary Support is simple - Provide IT services and solutions to small and medium businesses so they can focus on their core business. We offer a wide range of services :</p>
+                    <br>
+                    <a href="services.html"><button type="button" class="btn secondary-button btn-lg">Our Services</button></a>
+                </div>
+            </div>
+            <div class="right">
+               <img src="assets/IT-workplace.png" class="img-fluid">
+            </div>
+        </section>
+
+        <section id="mission-wrapper" class="fadeOnScroll">
+            <img class="bg" src="assets/backgrounds/abstract-bg.jpg">
+            <div class="content">
+                <h6>We are a group of Certified (CCE-V, MCSE, VCP, ITIL), enthusiastic and energetic IT Consultants with more than 15 years of Industry experience. We strongly believe that through diligence and discipline, we have what it takes to exceed our customer’s expectations. Customized IT services and solutions for one customer at a time is the way we like to do it.</h6>
+                <hr>
+                <h4>Gebriel Tamiru, Founder & CEO</h4>
+            </div>
+        </section>
+
+
+        <section id="client-list" class="fadeOnScroll">   
+            <h4>Our Clients</h4>
+            <p style="text-align: center;">Our consultants have worked either directly or via contracting with the following companies</p>
+            <div class="companies-wrapper">
+                <img src="assets/companies/microsoft-logo.jpg" class="img-fluid client">
+                <img src="assets/companies/IBM-logo.png" class="img-fluid client">
+                <img src="assets/companies/rbcbank.jpg" class="img-fluid client">
+                <img src="assets/companies/tdbank.jpg" class="img-fluid client">
+                <img src="assets/companies/compucom.png" class="img-fluid client">
+                <img src="assets/companies/ifds.png" class="img-fluid client">
+                <img src="assets/companies/bgrs.jpg" class="img-fluid client">
+            </div>
+        </section>
+
+        <section id="home-description" class="fadeOnScroll">
+            <h2>Why BinarySupport</h2>
+            <hr>
+            <h4>There are several keys to our Success</h4>
+            <br>
+
+            <div class="flex-wrapper">
+                <div class="facet">
+                    <div class="icon"><i class="fas fa-user-tie" aria-hidden="true"></i></div>
+                    <h5>Experience</h5>
+                    <p>We guarantee that your work is done by experienced and certified professionals</p>
+                </div>
+                <div class="facet">
+                     <div class="icon"><i class="fas fa-people-carry" aria-hidden="true"></i></div>
+                    <h5>Dedication</h5>
+                    <p>We strive to provide 100% client satisfaction</p>
+                </div>
+                <div class="facet">
+                     <div class="icon"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></div>
+                    <h5>Passion</h5>
+                    <p>We work with passion and energy</p>
+                </div>
+                <div class="facet">
+                     <div class="icon"><i class="fas fa-handshake" aria-hidden="true"></i></div>
+                    <h5>Professionalism</h5>
+                    <p>We want our working relationships to be sound and professional</p>
+                </div>
+                <div class="facet">
+                     <div class="icon"><i class="fas fa-people-arrows" aria-hidden="true"></i></div>
+                    <h5>Communication</h5>
+                    <p>We will work hard to build good, long-term relationships with our clients</p>
+                </div>
+                <div class="facet">
+                    <div class="icon"><i class="fas fa-file-invoice-dollar" aria-hidden="true"></i></div>
+                    <h5>Affordability</h5>
+                    <p>You pay less for great IT services</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p class="copyright">
+                2021 © Binary Support Inc. | All Rights Reserved
+            </p>
+
+            <div class="social-media">
+                <p><a href="#" data-toggle="modal" data-target="#contactModal">Contact</a></p>
+                <p>|</p>
+                <a  href="https://www.linkedin.com/company/binary-support/" class="social-media-icon"><i class="fa fa-linkedin-square fa-4x "></i></a>
+                <a  href="https://twitter.com/supportbinary" class="social-media-icon"><i class="fa fa-twitter-square fa-4x"></i></a>
+                <a  href="https://www.youtube.com/channel/UCLIPOmB7KVRJZi2cLfLF2-g" class="social-media-icon"><i class="fa fa-youtube-square fa-4x"></i></a>
+            </div>
+        </footer>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

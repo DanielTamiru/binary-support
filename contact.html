@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BinarySupport - Contact</title>
+    <!--Bootstrap Styling-->
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <!--Custom Styling-->
+    <link rel="stylesheet" href="CSS/app.css">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/dc70abf1d9.js" crossorigin="anonymous"></script>
+    <!--app script-->
+    <script src="JS/contact.js" async></script>
+    <!--animations-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid" id="contact-container">
+         <!--Contact Modal-->
+        <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog .modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe name="hiddenFrame" style="display: none;"></iframe>
+                    <form action="http://127.0.0.1:3000" method="POST" enctype="application/x-www-form-urlencoded" target="hiddenFrame" id="contact-form">
+                        <div class="form-group">
+                            <label for="messenger-name" class="col-form-label">Name:</label>
+                            <input name="sender" type="text" class="form-control" id="messenger-name" >
+                        </div>
+                        <div class="form-group">
+                            <label for="messenger-email" class="col-form-label">Email:</label>
+                            <input name="address" type="text" class="form-control" id='messenger-email'>
+                            <p class="fine-print">Optional. Give us your email if you want a response to your message.</p>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message: </label>
+                            <textarea name="text" class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary send-btn" data-dismiss="modal" id="submit-message-btn">Send message</button>
+                </div>
+                </div>
+            </div>
+        </div>
+       
+        
+        <header>
+            <!--navbar-->
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+                <a class="navbar-brand" href="#"><img src="assets/logo.png" class="img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            
+              <div class="navbar-block"></div>
+        </header>
+
+        <section id="contact-content">
+            <div class="landscape-wrapper">
+              <div class="contact-banner">
+                <h1>We'd love to hear from you</h1>
+                <h5>Want to get in touch? Here's how you can reach us...</h5>
+              </div>
+              <img class="contact-bg" src="assets/backgrounds/ethiopian landscape.jpeg">
+            </div>
+
+            <div class="contact-info">
+              <div class="contact-card">
+                <i class="fa fa-phone fa-4x" aria-hidden="true"></i>
+                <h5>Call Us</h5>
+                <p>If you would like to request a service, or if you have any questions or concerns, call the number below during work hours</p>
+                <h3>+1 416 206-3324</h3>
+              </div>
+              
+              <div class="contact-card">
+                <i class="fa fa-comments fa-4x" aria-hidden="true"></i>
+                <h5>Message Us</h5>
+                <p>Email us at <span class="email">info@binarysupport.net</span> or use the button below to leave us a message</p>
+                <button class="secondary-button btn-lg" href="#" data-toggle="modal" data-target="#contactModal">Message</button>
+              </div>
+             
+              
+            </div>
+        </section>
+
+        <footer>
+            <p class="copyright">
+                2021 © Binary Support Inc. | All Rights Reserved
+            </p>
+
+            <div class="social-media">
+                <p><a href="#" data-toggle="modal" data-target="#contactModal">Contact</a></p>
+                <p>|</p>
+                <a  href="https://www.linkedin.com/company/binary-support/" class="social-media-icon"><i class="fa fa-linkedin-square fa-4x "></i></a>
+                <a  href="https://twitter.com/supportbinary" class="social-media-icon"><i class="fa fa-twitter-square fa-4x"></i></a>
+                <a  href="https://www.youtube.com/channel/UCLIPOmB7KVRJZi2cLfLF2-g" class="social-media-icon"><i class="fa fa-youtube-square fa-4x"></i></a>
+            </div>
+        </footer>
+    
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

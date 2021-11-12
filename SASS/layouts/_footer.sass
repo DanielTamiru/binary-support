@@ -1,0 +1,55 @@
+footer
+    grid-area: footer
+    padding: 22px 40px
+    background-color: $secondary
+    color: white
+    display: flex
+    justify-content: space-between
+  
+    a   
+        text-decoration: none
+        &:link, &:visited
+            color: white
+            text-decoration: none
+        &:hover
+            color: $primary
+    
+    .copyright
+        font-size: 0.9rem
+        position: relative
+        top: 0.5rem
+        +breakpoint-mobile()
+                font-size: 0.5rem
+
+
+    .social-media     
+        display: flex
+        justify-content: flex-end
+       
+        p
+            font-size: 0.9rem
+            +breakpoint-mobile()
+                font-size: 0.8rem
+            display: block
+            margin: 0 5px
+            position: relative
+            top: 0.5rem
+            &:hover
+               color: $primary
+        p + p
+            margin-right: 20px
+      
+        .social-media-icon
+            font-size: 0.6rem
+            display: block
+            marging-left: 20px
+            margin-right: 20px
+            transition: all .2s ease-in-out
+            &:hover
+                transform: scale(1.1)
+                color: white
+
+    hr
+        background-color: white
+        width: 15%
+        margin: auto

@@ -1,0 +1,97 @@
+
+.carousel-control-prev, .carousel-control-next
+    top: 85%
+    width: 35px
+    height: 35px
+    z-index: 2
+
+    border-radius: 50%
+    padding: 6px
+    background-color: $accent
+    &:focus
+        opacity: 0.5
+    &:hover
+        opacity: 0.9
+
+.carousel-control-prev
+    left: 40px
+.carousel-control-next
+    left: 110px
+
+    
+#HomeCarousel
+    grid-area: carousel
+
+    .carousel-item
+        background-color: $primary
+        .bg
+            padding: 0
+            position: absolute
+            opacity: 0.05
+            z-index: 0
+
+        .slide-one-text
+            +carousel-text(50%, 8%, 14%)
+            h1  
+                font-size: 6.5rem
+                color: white
+            +breakpoint-tablet()
+                height: 200px
+                h1
+                    font-size: 4.4rem
+            .punchline
+                color: $secondary
+
+
+        .slide-two-text
+            +carousel-text(60%, 42%, 30%)
+            h4
+                font-size: 4rem
+            h2
+                margin-left: -10px
+                color: white
+                font-size: 5.6rem    
+            h5, i
+                display: inline-block
+                margin-left: 8px
+                font-size: 1.4rem
+                color: $secondary
+                transition: all .3s ease-in-out
+                &:hover + i 
+                    position: relative
+                    +translate(15px, 0)
+            
+            .quotation-marks
+                position: absolute
+                opacity: 0.3
+                height: 333px
+                left: 40%
+                top: -60%
+                z-index: 4
+                +breakpoint-tablet()
+                    display: hidden
+
+                    
+            +breakpoint-tablet()
+                padding-top: 6rem
+                height: 200px
+                padding: 40px
+                h2
+                    font-size: 4.5rem
+            +breakpoint-mobile()
+                padding-top: 30px     
+                h2
+                    margin-left: 0
+                    font-size: 2.8rem
+                h4 
+                    font-size: 3.7rem
+            
+        img
+            position: relative
+            z-index: 2
+            padding: 100px 7% 0 7%
+        .slide-one-img
+            float: right
+        .slide-two-img
+            float: left
+

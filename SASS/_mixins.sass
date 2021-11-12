@@ -1,0 +1,84 @@
+//Media Queries
+=breakpoint-mobile()
+    @media only screen and (max-width: $xs)
+        @content
+
+=breakpoint-tablet()
+    @media only screen and (max-width: $sm)
+        @content
+
+=breakpoint-smlaptop()
+    @media only screen and (max-width: $md)
+        @content
+
+//Styles
+=border($rad, $shadow, $border)
+    -webkit-box-radius: $rad
+    -moz-border-radius: $rad
+    border-radius: $rad
+
+    -webkit-box-shadow: $shadow
+    -moz-box-shadow: $shadow
+    box-shadow: $shadow
+
+    border: $border
+
+//Carousel
+=carousel-text($width, $left, $top)
+    position: absolute
+    z-index: 3
+    width: $width
+    left: $left
+    top: $top
+    h1, h2
+        position: relative
+        z-index: 5
+    
+    +breakpoint-tablet()
+        position: static
+        width: 100%
+        margin: 0 auto
+        text-align: center
+        margin-top: 100px
+        padding: 0
+
+=standard-button($color)
+    background-color: inherit
+    border: 2px solid $color
+    color: $color
+    &:hover, &:active
+        background-color: $color
+        color: white
+        
+=translate($right, $up)
+    -webkit-transform: translate($right,$up)
+    -moz-transform: translate($right,$up)
+    -o-transform: translate($right,$up)
+    -ms-transform: translate($right,$up)
+    transform: translate($right,$up)
+
+=center-vertically()
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+    
+=horizontal-line($color)
+    width: min(100px, 25%)
+    margin: 0 auto
+    border: none
+    border-radius: 3px
+    height: 5px
+    background-color: darken($color, 4%)
+
+=icon-circle($icon-color, $outline-color)
+    color: $icon-color
+    font-size: 2.5rem
+    text-align: center
+    i
+        display: block
+        -webkit-box-radius: 50%
+        -moz-border-radius: 50%
+        border-radius: 50%
+        border: 5px solid $outline-color
+        padding: 30px 
+

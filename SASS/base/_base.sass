@@ -1,0 +1,61 @@
+body 
+    font-family: $default-font
+h1
+    color: $secondary
+    font-weight: bold
+
+h2, h3, h4
+    color: $secondary
+    font-weight: 900
+a, button
+    cursor: grab
+    &:focus
+        outline: none
+
+article
+    -webkit-column-count: 2
+    -moz-column-count: 2
+    column-count: 2
+    column-gap: 28px
+    +breakpoint-mobile()
+        -webkit-column-count: 1
+        -moz-column-count: 1
+        column-count: 1
+        
+        
+#home-container
+    display: grid
+    padding: 0
+    margin: 0 auto
+    grid-template-columns: 1fr
+    grid-template-areas: "header" "carousel" "intro" "clients" "description" "mission"   "footer"
+    background-color: white
+    font-family: $default-font
+    color: black
+
+.navbar-block
+    background-color: black
+    height: 56px
+    
+#services-container
+    @extend #home-container
+    grid-template-columns: "header" "content" "footer"
+
+#about-container
+    @extend #home-container
+    grid-template-columns: "header" "content" "footer"
+
+#contact-container
+    @extend #home-container
+    grid-template-columns: "header" "content" "footer"
+
+.primary-button
+    +standard-button($primary)
+
+.secondary-button
+    +standard-button($secondary)
+    transition: all .2s ease-in-out
+    &:hover, &:active
+        background-color: $accent
+        border: 2px solid $accent
+   

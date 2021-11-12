@@ -1,0 +1,371 @@
+//HOME PAGE
+#home-intro
+    grid-area: intro
+    display: grid
+    gap: inherit
+    grid-template-columns: 6fr 5fr
+    background-color: $lgrey
+    margin: 0 auto
+    padding-top: 40px
+    padding-bottom: 20px
+    color: black
+    
+    +breakpoint-mobile()
+        grid-template-columns: 1fr
+
+    .left
+        padding: 150px 0% 60px 20%
+        +breakpoint-mobile()
+            padding: 100px 10% 30px 10%
+        margin: 0 auto
+        h2
+            font-size: 2.7rem
+            //-webkit-text-stroke: 1px white
+            +breakpoint-mobile()
+                font-size: 2rem
+        p
+            font-size: 1.2rem
+            font-weight: normal
+            color: black
+        
+    .right
+        padding: 50px 10% 80px 10%
+        +breakpoint-tablet()
+            padding-top: 0
+        img
+            display: block
+            margin: 0 auto
+            position: relative
+            top: 50%
+            transform: translateY(-60%)
+            +breakpoint-tablet()
+                width: 100%
+       
+
+#mission-wrapper
+    grid-area: mission
+    text-align: center
+    overflow: hidden
+    position: relative
+    background-color: white
+   
+    .bg
+        padding: 0
+        margin: 0 auto
+        width: 100%
+        position: absolute
+        left: 0
+        opacity: 0.065
+        z-index: 0
+    
+    .content
+        position: relative
+        z-index: 1
+        padding: 90px 20% 90px
+
+        img
+            display: block
+            margin: 0 auto
+            width: 50px
+    
+        h6
+            margin: 30px 0
+            color: lighten($secondary, 3%)
+            line-height: 1.5
+            font-size: 1.3rem
+            font-weight: 300    
+            +breakpoint-mobile()
+                font-size: 1.1rem
+
+        hr
+            width: 75%
+        h4
+            padding: 12px 0
+            color: $secondary
+        
+
+
+#client-list
+    padding: 35px 0
+    grid-area: clients
+    background-color: white
+    h4
+        margin-top: 60px
+        margin-bottom: 20px
+        text-align: center
+        font-weight: 600
+        font-size: 2rem
+    p
+        color: lighten($secondary, 18%)
+        font-size: 1.1rem
+    hr
+        +horizontal-line($lgrey)
+    .companies-wrapper
+        padding: 75px 15% 0
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+
+        .client
+            display: block
+            padding: 20px
+            max-height: 100px
+            max-width: 275px
+            
+            text-align: center
+            +center-vertically()
+            -webkit-filter: grayscale(100%) //* Safari 6.0 - 9.0 */
+            filter: grayscale(100%)
+            transition: all .25s ease-in-out
+            top: 0
+            &:hover
+                -webkit-filter: grayscale(0%) //* Safari 6.0 - 9.0 */
+                filter: grayscale(0%)
+                top: -7px
+       
+
+#home-description
+    grid-area: description
+    background-color: $lgrey
+    padding: 50px
+    text-align: center
+    
+    h2
+        color: $secondary
+   
+    hr 
+        background-color: $accent
+        height: 3px
+        width: 30%
+    
+    h4
+        font-weight: 400
+        font-size: 1.4rem
+    
+        
+    .flex-wrapper 
+        display: flex
+        justify-content: space-evenly
+        flex-wrap: wrap
+        margin: 0 auto
+        padding: 0 min(10%, 30px)
+
+        .facet
+            width: min(360px, 100%)
+            margin: 30px 20px 0px
+            
+            .icon
+                margin: 10px auto
+                width: 118px
+                +icon-circle($primary, $primary)  
+                transition: transform 1s
+                &:hover
+                    transform: scale(1.05)
+                i
+                    transition: transform 1s, border-color 1s
+                    &:hover
+                        border-color: $accent
+                        transform: rotate(20deg)
+                    
+
+                    
+
+            h5
+                font-size: 1.3rem
+                font-weight: 600
+                color: $secondary
+                margin-bottom: 20px
+            p
+                font-size: 1.1rem
+                color: lighten($secondary, 15%)
+                
+
+            
+  
+//------------------------------------
+
+//SERVICES PAGE
+#services-content
+    grid-area: "content"
+   
+    .service-intro
+        position: relative
+        overflow: hidden
+        .bg
+            padding: 0
+            position: absolute
+            top: 0
+            left: 0
+            opacity: 0.04
+            z-index: 0
+
+        margin-top: 35px
+        padding: 115px 5%
+        background-color: $lgrey
+        text-align: center
+        h1 
+            font-size: 2.8rem
+        h6
+            padding: 10px
+            font-size: 1.08rem
+            
+
+    .services-strip
+        margin: 0 auto
+        background-color: $primary
+        h2, h4
+            color: white
+            padding: 25px 40px
+            font-size: 2.2rem
+        h4 
+            font-size: 1.5rem
+
+    .other-services-title
+        margin: 50px auto 10px
+        text-align: center
+        width: 100%
+        h4
+            font-size: 1.8rem
+            color: $secondary
+        hr 
+            background-color: $accent
+            height: 3px
+            width: 300px
+        h6
+            color: $secondary
+            font-size: 1.1rem
+
+    .service-grid
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: flex-start
+        margin: 0 20px
+        padding: 35px 10px 20px 
+        .card
+            margin: 0 20px 35px 20px
+            width: 450px
+            .card-title
+                font-size: 1.25rem
+                font-weight: 600
+            .card-text
+                ul
+                    list-style-type: square
+                    margin-left: -1em
+                    li
+                        color: $accent
+                        span
+                            color: black
+                
+            
+            .card-link  
+                color: $accent
+                display: block
+                margin: 0 auto
+                text-align: center
+            a[aria-expanded=true] .fa-chevron-down
+                display: none
+            a[aria-expanded=false] .fa-chevron-up
+                display: none    
+           
+            transition: all .25s ease-in-out
+            &:hover
+                transform: scale(0.97)  
+    
+    .additional-service-grid
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        .card
+            margin: 0 20px 35px 20px
+            width: 340px
+            transition: all .25s ease-in-out
+            .card-title
+                font-size: 1.2rem
+                font-weight: 400
+            &:hover
+                transform: scale(0.97)  
+           
+                
+    
+//----------------------------------
+
+//CONTACT PAGE
+#contact-content
+    grid-area: "content"
+    .landscape-wrapper
+        background-color: $primary
+        overflow: hidden
+        img
+            position: relative
+            width: 100%
+            z-index: 1
+            opacity: 0.45
+        .contact-banner
+            width: 100%
+            text-align: center
+            position: absolute
+            z-index: 2
+            top: 220px
+            h1
+                color: white
+                font-size: 4.5rem
+            h5         
+                color: white
+                font-size: 1.1rem
+
+            +breakpoint-tablet()
+                h1
+                    font-size: 3.5rem
+                top: 180px
+            +breakpoint-mobile()
+                h1
+                    font-size: 2rem
+                top: 120px
+            
+    .contact-info
+        display: flex
+        justify-content: center
+        margin-bottom: 80px
+        +breakpoint-mobile()
+            display: block
+        .contact-card
+            transition: all .2s ease-in-out
+            &:hover
+                transform: scale(1.02)
+
+            i
+                margin: 10px auto
+            h5
+                margin: 0 auto
+                font-weight: 600
+                color: $secondary
+            p
+                width: 90%
+                margin-right: auto
+                margin-left: auto
+                color: lighten($secondary, 6%)
+                i
+                    color: lighten($secondary, 6%)
+                    margin-left: 2px
+                    margin-right: 2px
+            h3
+                transition: all .2s ease-in-out
+                &:hover
+                    color: $accent
+            .email
+                color: black
+
+            button
+                margin: 10px auto
+            
+            
+            
+
+            
+
+        
+
+
+
+            

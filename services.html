@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BinarySupport - Services</title>
+    <!--Bootstrap Styling-->
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <!--Custom Styling-->
+    <link rel="stylesheet" href="CSS/app.css">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/dc70abf1d9.js" crossorigin="anonymous"></script>
+    <!--app script-->
+    <script src="JS/contact.js" async></script>
+    <!--animations-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid" id="services-container">
+        <!--Contact Modal-->
+        <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog .modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe name="hiddenFrame" style="display: none;"></iframe>
+                    <form action="http://127.0.0.1:3000" method="POST" enctype="application/x-www-form-urlencoded" target="hiddenFrame" id="contact-form">
+                        <div class="form-group">
+                            <label for="messenger-name" class="col-form-label">Name:</label>
+                            <input name="sender" type="text" class="form-control" id="messenger-name" >
+                        </div>
+                        <div class="form-group">
+                            <label for="messenger-email" class="col-form-label">Email:</label>
+                            <input name="address" type="text" class="form-control" id='messenger-email'>
+                            <p class="fine-print">Optional. Give us your email if you want a response to your message.</p>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message: </label>
+                            <textarea name="text" class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary send-btn" data-dismiss="modal" id="submit-message-btn">Send message</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <!--navbar-->
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+                <a class="navbar-brand" href="#"><img src="assets/logo.png" class="img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            
+              <div class="navbar-block"></div>
+        </header>
+
+        <section id="services-content">
+          <div class="service-intro">
+            <img class="bg" src="assets/backgrounds/binary-bg.jpg">
+            <h1>Here's what you can expect from us</h1>
+            <h6>We offer a wide range of services; Get in touch with us to request a service or book a consultation</h6>
+          </div>
+          <div class="services-strip">
+            <h2>Main Services</h2>
+          </div>
+
+          <div class="service-grid">
+            <div class="card">
+              <img class="card-img-top" src="assets/services/citrix-consulting.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Citrix Infrastructure </h5>
+                <div class="card-text"> 
+                  On-prem/Citrix and Cloud/Citrix on Azure: 
+                  <ul>
+                    <li><span>Migrate a Citrix On-prem infrastructure or workload to either Citrix cloud or Azure</span></li>
+                    <li><span>Design, deploy, configure, migrate, monitor, optimize and provision Citrix Virtual Apps and Desktops</span></li>
+                    <li><span>Conduct a performance assessment of existing Citrix infrastructure, and generate a report, suggest improvements</span></li>
+                    <li><span>Troubleshoot, find root causes, fix and document resolution</span></li>
+                  </ul>          
+                </div>
+                <a class="card-link" data-toggle="collapse" href="#card1Collapse" role="button" aria-expanded="false" aria-controls="card1Collapse">
+                  <i class="fa fa-chevron-down"></i>
+                  <i class="fa fa-chevron-up"></i>
+                </a>
+                <div id="card1Collapse" class="card-text collapse">
+                  <ul>
+                    <li><span>Research emerging trends in technology, provide recommendations on performance/usability/cost analysis</span></li>
+                    <li><span>Educate, support end-users to optimize productivity</span></li>
+                  </ul>       
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="assets/services/windows-consulting.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Microsoft Windows Infrastructure</h5>
+                <div class="card-text">
+                  <ul>
+                    <li><span>Create, upgrade, migrate and configure a Microsoft Active Directory infrastructure </span></li>
+                    <li><span>End-to-end Windows 10 migration</span></li>
+                    <li><span>Installation, configuration, deployment, diagnosis, troubleshooting and maintenance (patches, hotfixes, service packs and upgrades) - all platforms (Servers 2012r2/2016/2019)</span></li>
+                    <li><span>Group policy: Create, deploy, and test GPOs based on Microsoft’s best practice. Resolve complex GPO issues through meticulous troubleshooting in mixed environments.</span></li>
+                    <li><span>Provide 3rd level support 24x7</span></li>
+                  </ul>          
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="assets/services/vmware-consulting.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">VMware Virtualization </h5>
+                <div class="card-text"> 
+                  If your virtualization platform is VMWare, we offer the below customized VMWare solution services:
+                  <br>
+                  <br>
+                  <ul>
+                      <li><span>Monitor events, performance thresholds, critical services and find out bottlenecks</span></li>
+                      <li><span>Install, configure, test and troubleshoot VMware ESXi, patches, firmwares </span></li>
+                      <li><span>Manage, administer users resource access based on VMWare's best practice </span></li>
+                      <li><span>Add and configure new peripherals (additional disks, memory, storage, etc.)</span></li>
+                  </ul>          
+                </p>
+                <a class="card-link" data-toggle="collapse" href="#card3Collapse" role="button" aria-expanded="false" aria-controls="card3Collapse">
+                  <i class="fa fa-chevron-down"></i>
+                  <i class="fa fa-chevron-up"></i>
+                </a>
+                <div id="card3Collapse" class="card-text collapse">
+                  <ul>
+                    <li><span>Perform regular backups and disaster recovery tasks</span></li>
+                    <li><span>Generate performance reports (CPU, memory, disk, Network, VMs)</span></li>
+                  </ul>          
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Other services-->
+          <div class="other-services-title">
+            <h4>Other Services</h4>
+            <hr>
+            <h6>We have much more to offer</h6>
+            <br>
+          </div>
+
+          <div class="additional-service-grid">
+            <div class="card">
+              <img class="card-img-top" src="assets/services/webdev-pic.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Web Development</h5>
+                <p class="card-text">Create and customize your website (Java, Java script, Python, ASP, HTML)</p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="assets/services/computer-performance.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Corportate & User Data Backups</h5>
+                <p class="card-text">Backup your data on the Cloud or On-prem</p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="assets/services/coaching.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Coaching and training techncal staff and end-users</h5>
+                <p class="card-text">Our experts will help your team get up to speed</p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="assets/services/tech-support.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">24/7 Incident-based and Contractual Support</h5>
+                <p class="card-text">Quality 2nd and 3rd level technical support anytime, anywhere</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+            <p class="copyright">
+                2021 © Binary Support Inc. | All Rights Reserved
+            </p>
+
+            <div class="social-media">
+                <p><a href="#" data-toggle="modal" data-target="#contactModal">Contact</a></p>
+                <p>|</p>
+                 <a  href="https://www.linkedin.com/company/binary-support/" class="social-media-icon"><i class="fa fa-linkedin-square fa-4x "></i></a>
+                <a  href="https://twitter.com/supportbinary" class="social-media-icon"><i class="fa fa-twitter-square fa-4x"></i></a>
+                <a  href="https://www.youtube.com/channel/UCLIPOmB7KVRJZi2cLfLF2-g" class="social-media-icon"><i class="fa fa-youtube-square fa-4x"></i></a>
+            </div>
+        </footer>
+    
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

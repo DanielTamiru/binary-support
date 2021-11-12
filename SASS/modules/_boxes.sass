@@ -1,0 +1,40 @@
+.media-box
+    background-color: inherit
+    color: inherit
+    width: 85%
+    display: block
+    text-align: center
+    margin: 0 auto
+    +border(0, 0 0 8px #666, 1px solid inherit)
+    +breakpoint-mobile()
+        width: 94%
+
+    h2
+        padding-top: 2rem
+        font-weight: 600
+        text-align: center
+        color: $secondary
+    .media
+        width: 90%
+        display: block
+        margin: 30px auto
+
+.contact-card
+    @extend .media-box
+    margin-top: -50px
+    padding: 20px
+    z-index: 1
+    background-color: white
+    width: 40%
+    i, h5 + p, p + h3, p + button
+        margin-top: 30px
+    i
+        color: $primary
+    h5
+        font-weight: bold
+    +breakpoint-mobile()
+        width: 94%
+        margin-top: 45px
+
+
+        
