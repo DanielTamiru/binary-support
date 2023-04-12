@@ -1,5 +1,5 @@
 # Binary Support
-This is the code behind the yet to be punblished website of BinarySupport, a small IT consulting company from Toronto, Ontario.
+This is the code behind the yet to be published website of BinarySupport, a small IT consulting company from Toronto, Ontario.
 
 ## Homepage
 
