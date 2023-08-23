@@ -10,11 +10,11 @@ app.use(bodyParser.urlencoded({extended: false}))
 const nodemailer = require('nodemailer');
 // Create Transporter
 let transporter = nodemailer.createTransport({
-    host: 'smtp.ionos.com',
-    port: 587,
+    host: 'smtp.ionos.com', // TODO: update
+    port: 587,	// TODO: update
     auth: {
-        user: 'info@binarysupport.net',
-        pass: 'Leadingxx63!'
+        user: 'info@binarysupport.net',	
+        pass: 'Leadingxx63!'	// TODO: update
     }
 })
 
@@ -39,7 +39,7 @@ app.post('/', function(request, response) {
         }
 
         let mailOptions = {
-            from: 'info@binarysupport.com',
+            from: 'info@binarysupport.com',	// TODO: .net
             to: 'danny.tamiru@gmail.com',
             subject: 'Website Message from ' + sender + address,
             text: 'Message Received from BinarySupport.net:\n\n\n' + sender + ' said:\n\n' + message.text,                
